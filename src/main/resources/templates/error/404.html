@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link th:href="@{/webjars/bootstrap/5.1.1/css/bootstrap.css}" rel="stylesheet" />
+<link th:href="@{/asserts/css/signin.css}" rel="stylesheet" />
+<script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}" ></script>
+<title>404 Error</title>
+</head>
+<body>
+<table class="table">
+	<tr>
+		<td colspan="2">出错了</td>
+	</tr>
+	<tr>
+		<td>状态码</td>
+		<td th:text="${status}"></td>
+	</tr>
+	<tr>
+		<td>错误提示</td>
+		<td th:text="${error}"></td>
+	</tr>
+	<tr>
+		<td>异常对象</td>
+		<td th:text="${exception}"></td>
+	</tr>
+	<tr>
+		<td>异常消息</td>
+		<td th:text="${message}"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><a href="./">back to index</a></td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link th:href="@{/webjars/bootstrap/5.1.1/css/bootstrap.css}" rel="stylesheet" />
+<link th:href="@{/asserts/css/signin.css}" rel="stylesheet" />
+<script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}" ></script>
+<title>Error Page</title>
+</head>
+<body>
+<table class="table">
+	<tr>
+		<td colspan="2">出错了</td>
+	</tr>
+	<tr>
+		<td>错误信息</td>
+		<td th:text="${msg}"></td>
+	</tr>
+	<tr>
+		<td>错误位置</td>
+		<td th:text="${classPath}+'.'+${methodName}+'.'+${line}"></td>
+	</tr>
+	<tr>
+		<td>失败请求</td>
+		<td th:text="${url}"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><a href="./">back to index</a></td>
+	</tr>
+</table>
+</body>
+</html>
